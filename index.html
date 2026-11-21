@@ -92,6 +92,9 @@
 </head>
 <body>
 
+    <h1 style="position:absolute; top:10px; left:10px; color:#888; font-size:0.8rem;"><strong>RetroDrive - Hybrid Edition</strong></h1>
+    <p style="position:absolute; top:30px; left: 10px; color:#888; font-size:0.8rem;">Don't forgot to turn the radio on!<br>To use Local Player, insert the music by clicking the LOAD button. Select an album or folder to play. It will upload the FULL folder or album<br>Use the bottom-left knobs to adjust the equalizer settings. Use the volume knob to adjust volume.<br>The Tune button will randomly select a song inside the uploaded album or folder.<br>To save the song as a preset, click and hold the preset button.<br>Spotify integration is currently limited. <br>Once working, you will be able to connect your Spotify account and connect this player as a speaker device.</p>
+
 <div class="radio-frame" id="main-chassis">
     <div class="cd-group">
         <button class="load-btn" id="cd-load">&#9650; LOAD</button>
@@ -145,9 +148,12 @@
 <script src="https://sdk.scdn.co/spotify-player.js"></script>
 
 <script>
+
+    alert("Warning: The Spotify integration requires a valid Premium token. At the moment, Spotify is currently limiting access to tokens. For the time being, the Spotify functions are not active. Please use the local audio features instead.");
+    
     // --- IMPORTANT: SPOTIFY AUTH ---
     // You must generate a temporary token from: https://developer.spotify.com/documentation/web-playback-sdk
-    const SPOTIFY_TOKEN = 'BQBWH8fH7vd4hv_Qak1t4S7j4pGidGWBKQhkNV6UpDPeWVHKh4VsO-1QD0xfvbjUj_73AxLz7rIfkAuePRdv7J1Dhr8OOiNg3uLcr1ItGHS8O5mqHd33-UxDmmKL0x-ZKBrvNLtvSmn83HXysJs6G85KB1RITKBdzh4LL9Xwb0FXx2Sxsw3l7F_RQSEkehYXSRjfD99d6ieMhcQALBKg8lJDkWa1qxTwfPWO3p4lbBT1MEN43V8FyaM00D1gHjRmD4caPTFAXokn'; 
+    const SPOTIFY_TOKEN = 'PASTE_YOUR_PREMIUM_TOKEN_HERE'; 
     
     // --- STATE ---
     let currentMode = 'CD'; // 'CD' or 'SPOTIFY'
